@@ -23,21 +23,21 @@ While large language models (LLMs) are very powerful, they have two key limitati
 
 Here’s how it works, broken into three stages:
 
-###1. Indexing (Preprocessing)
+### 1. Indexing (Preprocessing)
 Before anything can be retrieved, your documents need to be processed and stored in a way that enables fast, intelligent searching. This involves:
 
 - Splitting documents into smaller chunks (like paragraphs or sections),
 - Creating *vector embeddings* for each chunk—numerical representations that capture the meaning of the text,
 - Storing these embeddings in a *vector database* for quick lookup.
 
-###2. Retrieval (Query-Time Search)
+### 2. Retrieval (Query-Time Search)
 When a user asks a question, the system:
 
 - Converts the question into an embedding,
 - Searches the vector database to find the most semantically similar chunks,
 - Returns these top matches as the most relevant context.
 
-###3. Generation (LLM Response)
+### 3. Generation (LLM Response)
 The retrieved document chunks, the user’s original question, and any specific instructions are passed to an LLM, which then generates a natural language response *grounded in the retrieved context*.
 
 This allows the system to provide answers even about topics the LLM has never seen during training.
